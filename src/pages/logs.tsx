@@ -10,9 +10,16 @@ async function getLogs() {
 	const logs = await response.json()
 	return logs
 }
-
+type Log = {
+	id: number;
+	username: string;
+	language: string;
+	stdin: string;
+	stdout: string;
+	createdAt: string;
+};
 const Logs = () => {
-	const [logs, setLogs] = useState([])
+	const [logs, setLogs] = useState<Log[]>([])
 	async function logsSetting() {
 		const logList = await getLogs()
 
