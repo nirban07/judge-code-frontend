@@ -16,7 +16,7 @@ function App() {
         <nav className=' flex justify-center mt-10'>
           <Tabs defaultValue="account" className="w-[400px] justify-center flex">
             <TabsList>
-              <Link to={"/details"}><TabsTrigger value="account"> Details</TabsTrigger></Link>
+              <Link to={"/"}><TabsTrigger value="account"> Details</TabsTrigger></Link>
               <Link to={"/logs"}><TabsTrigger value="password"> Logs</TabsTrigger></Link>
             </TabsList>
             {/* <TabsContent value="account">Make changes to your account here.</TabsContent>
@@ -25,7 +25,7 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path='details' element={<Details />} />
+          <Route path='/' element={<Details />} />
           <Route path='logs' element={<Logs />} />
         </Routes>
       </BrowserRouter>
